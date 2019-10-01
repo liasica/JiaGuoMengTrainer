@@ -44,6 +44,7 @@ Dim autoUpdateInterval = `120`
 ### 不需要收集的货物
 > 每行一条数据, 可设置多条
 格式为 `buildings(**格子序号**, 2) = False` 每行一条
+https://github.com/liasica/JiaGuoMengTrainer/blob/master/trainer.txt#L36
 
 ### 要升级的建筑
 > 每行一条数据, 可设置多条

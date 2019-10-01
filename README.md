@@ -48,6 +48,9 @@ https://github.com/liasica/JiaGuoMengTrainer/blob/master/trainer.txt#L36
 
 ### 要升级的建筑
 > 每行一条数据, 可设置多条
+
+https://github.com/liasica/JiaGuoMengTrainer/blob/master/trainer.txt#L44
+
 格式为
 ```
 buildings(格子序号, 3) = True

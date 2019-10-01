@@ -33,7 +33,7 @@ Dim autoUpdateInterval = 120
  * buildings({格子数 - 1}, 2) = False
  * 例: 第五格不收货
  */
-buildings(4, 2) = False
+// buildings(4, 2) = False
 
 /**
  * 自定: 要升级的建筑, 每行一条数据, 可设置多条

@@ -18,6 +18,7 @@ For i = 0 To UBound(buildingsArr)
 	buildings(i, 1) = pos(1)
 	buildings(i, 2) = True
 	buildings(i, 3) = False
+	buildings(i, 4) = 1
 Next
 
 // 升级次数
@@ -37,12 +38,12 @@ Dim autoUpdateInterval = 120
 
 /**
  * 自定: 要升级的建筑, 每行一条数据, 可设置多条
- * buildings({格子数 - 1}, 3) = True
- * buildings({格子数 - 1}, 4) = 1
+ * buildings({格子数 - 1}, 3) = True 该格建筑是否自动升级
+ * buildings({格子数 - 1}, 4) = 1 该格建筑每次自动升级升级次数，默认为1
  * 例: 第4格自动升级, 每次升级1次
  */
-buildings(3, 3) = True
-buildings(3, 4) = 1
+// buildings(3, 3) = True
+// buildings(3, 4) = 1
 
 Dim goodsList = Array("334,817", "412,783", "488,742")
 Dim goodsDecide = Array("339,840,343,844", "418,800,421,804", "494,757,497,761")

@@ -61,3 +61,8 @@ https://github.com/liasica/JiaGuoMengTrainer/blob/master/trainer.txt#L44
 buildings(格子序号, 3) = True
 buildings(格子序号, 4) = 1
 ```
+
+### 编辑和使用
+- 打开按键精灵手机助手
+- 连接手机模拟器
+- 导入脚本, 查看最新版本: https://github.com/liasica/JiaGuoMengTrainer/releases

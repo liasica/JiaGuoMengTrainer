@@ -1,8 +1,7 @@
 // 需要: 分辨率 540 × 960
 If EnableFastCapture(true) Then 
-	TracePrint "开启快速取色"
+    TracePrint "开启快速取色"
 End If
-
 
 // 坐标系 (从左往右, 从下往上, 从0开始)
 Dim edit = Array(487, 574)
@@ -12,11 +11,11 @@ Dim buildingsStr = "180,624 311,562 428,506 182,502 303,440 432,377 185,374 304,
 // 生成坐标系
 Dim buildingsArr = Split(buildingsStr, " ")
 For i = 0 To UBound(buildingsArr)
-	Dim pos = GetPosition(buildingsArr(i))
-	buildings(i, 0) = pos(0)
-	buildings(i, 1) = pos(1)
-	buildings(i, 2) = True
-	buildings(i, 3) = False
+    Dim pos = GetPosition(buildingsArr(i))
+    buildings(i, 0) = pos(0)
+    buildings(i, 1) = pos(1)
+    buildings(i, 2) = True
+    buildings(i, 3) = False
 Next
 
 // 升级次数
@@ -25,7 +24,7 @@ Dim autoLevelUpTimes = 0
 /**
  * 自定义升级间隔 (单位: 秒)
  */
-Dim autoUpdateInterval = 120
+Dim autoUpdateInterval = 10
 
 /**
  * 自定义不要收集的货物, 每行一格
@@ -40,171 +39,186 @@ Dim autoUpdateInterval = 120
  * 自定义每次升级次数 buildings(格子序号, 4) = 1
  * 例: 第4格建筑自动升级, 每次升级1次
  */
-// buildings(3, 3) = True
-// buildings(3, 4) = 1
+//buildings(3, 3) = True
+//buildings(3, 4) = 1
 
 // 货物坐标
 Dim goodsList = Array("334,817", "412,783", "488,742")
-Dim goodsDecide = Array("339,840,343,844", "418,800,421,804", "494,757,497,761")
+Dim goodsDecide = Array("341,842", "419,801", "495,758")
 
 // 升级政策
 Dim policyTimes = 0
 Dim policyInterval = 120
 
+Dim trainGoods = Array(False, False, False)
 While True
-	Dim same = CmpColor(479, 559, "3EC6FF", 0.9)
-	If same = 0 Then 
-		// 防弹窗
-		Tap 29, 937
-		// 收集货物 
-		Dim hasGoods = FindTrain(), goodsTimes = 0
-		// 有火车先送火车
-		Do While hasGoods
-			hasGoods = FindTrain()
-			goodsTimes = goodsTimes + 1
-			TracePrint goodsTimes
-			Delay 100
-			If goodsTimes >= 6 Then 
-				KillApp "com.tencent.jgm"
-				Delay 200
-				RunApp "com.tencent.jgm"
-				hasGoods = False
-				Delay 5000
-			End If
-		Loop
-		// 收集金币 
-		GetGold
-		// 自动升级
-		AutoLevelUp 
-		// 自动升级政策
-		// PolicyLevelUp
-		Delay 100
-	End If
+//    TracePrint "新循环"
+    Dim same = CmpColor(479, 559, "3EC6FF", 0.9)
+    If same = 0 Then 
+        // 防弹窗
+        Tap 29, 937
+        // 收集货物 
+        FindTrain
+        Dim hasGoods = CheckHasGoods(), goodsTimes = 0
+        // 有火车先送火车
+        Do While hasGoods
+            TracePrint hasGoods
+            FindTrain
+            hasGoods = CheckHasGoods()
+            TracePrint hasGoods
+            goodsTimes = goodsTimes + 1
+            TracePrint goodsTimes
+            Delay 100
+            If goodsTimes >= 6 Then 
+                // 关闭游戏
+                KillApp "com.tencent.jgm"
+                Delay 200
+                RunApp "com.tencent.jgm"
+                hasGoods = False
+                Delay 5000
+            End If
+        Loop
+        // 收集金币 
+        GetGold
+        // 自动升级
+        AutoLevelUp 
+        // 自动升级政策
+        // PolicyLevelUp
+        Delay 100
+    End If
 Wend
 
 // 获取金币
 Function GetGold
-	For i = 0 To UBOUND(buildings)
-		Tap buildings(i, 0), buildings(i, 1)
-		Delay 200
-	Next
+    For i = 0 To UBOUND(buildings)
+        Tap buildings(i, 0), buildings(i, 1)
+        Delay 200
+    Next
+End Function
+
+Function CheckHasGoods
+    If trainGoods(0) = False And trainGoods(1) = False And trainGoods(2) = False Then 
+        CheckHasGoods = False
+    Else 
+        CheckHasGoods = True
+    End If
 End Function
 
 // 查找火车
 Function FindTrain()
-	For i = 0 To 2
-		If FindGoods(i) Then 
-			FindTrain = True
-			DragGoods (i)
-			Delay 1000
-		End If
-	Next
+    For i = 0 To 2
+        If FindGoods(i) Then 
+            DragGoods (i)
+            Delay 1000
+        End If
+    Next
 End Function
 
 // 查找货物
 Function FindGoods(index)
-	Tap 29, 937
-	Dim zb = GetPosition(goodsDecide(index))
-	Dim intX, intY
-	Dim text = index + 1, msg = "找到货物" & text
-	
-	FindColor zb(0), zb(1), zb(2), zb(3), "FFFFFF", 0, 1.0, intX, intY
-	Dim same = CmpColor(282, 849, "00D8F6", 0.9)
-	
-	If intX > -1 And intY > -1 And same = 0 Then 	
-		TracePrint msg
-		ShowMessage msg
-		FindGoods = True
-	Else 
-		// TracePrint "未找到货物" & text
-		FindGoods = False
-	End If
+    Tap 29, 937
+    Dim zb = GetPosition(goodsDecide(index))
+    Dim intX, intY
+    Dim text = index + 1, msg = "找到货物" & text
+    
+    Dim cp = CmpColor(zb(0), zb(1), "FFFFFF", 1)
+//    TracePrint index & " -> " & cp
+    
+    If cp > -1 Then
+        TracePrint msg
+        trainGoods(index) = True
+        FindGoods = True
+    Else 
+        trainGoods(index) = False
+//        TracePrint "未找到货物" & text
+        FindGoods = False
+    End If
 
 End Function
 
 // 拖拽货物
 Function DragGoods(index)
-	Dim pos = GetPosition(goodsList(index))
-	Dim x, y, msg, needGoods = False
+    Dim pos = GetPosition(goodsList(index))
+    Dim x, y, msg, needGoods = False
 	
-	// 获取当前颜色
-	Dim beforeColor(), target
-	KeepCapture 
-	For m = 0 To UBOUND(buildings)
-		Dim color = GetPixelColor(buildings(m, 0), buildings(m, 1))
-		beforeColor(m) = color
-	Next
-	ReleaseCapture 
+    // 获取当前颜色
+    Dim beforeColor(), target
+    KeepCapture 
+    For m = 0 To UBOUND(buildings)
+        Dim color = GetPixelColor(buildings(m, 0), buildings(m, 1))
+        beforeColor(m) = color
+    Next
+    ReleaseCapture 
 	
-	// 按下货物
-	TouchUp 1
-	TouchDown pos(0), pos(1), 1
-	Delay 100
+    // 按下货物
+    TouchUp 1
+    TouchDown pos(0), pos(1), 1
+    Delay 100
 	
-	KeepCapture 
-	For n = 0 To UBound(buildings)
-		Dim afterColor = GetPixelColor(buildings(n, 0), buildings(n, 1))
-		// 比较颜色差值
-		Dim diff = ColorDiff(beforeColor(n), afterColor)
-		TracePrint "货物:" & (index + 1) & " -> " & (n + 1) & " 的差值是:"& diff
-		If diff > 100 Then 
-			TracePrint "货物:" & (index + 1) & "的目标是:"& (n + 1) & ", 差值是: " & diff 
-			If buildings(n, 2) Then 
-				needGoods = True
-				target = n
-				msg = "货物:" & (index + 1) & "的目标是:"& (n + 1)
-				TracePrint msg
-				x = buildings(n, 0)
-				y = buildings(n, 1)
-			Else 
-				needGoods = False
-				TracePrint "货物跳过"
-				ShowMessage "货物跳过"
-			End If
-			Exit For
-		End If
-	Next
-	ReleaseCapture 
+    KeepCapture 
+    For n = 0 To UBound(buildings)
+        Dim afterColor = GetPixelColor(buildings(n, 0), buildings(n, 1))
+        // 比较颜色差值
+        Dim diff = ColorDiff(beforeColor(n), afterColor)
+        TracePrint "货物:" & (index + 1) & " -> " & (n + 1) & " 的差值是:"& diff
+        If diff > 100 Then 
+            TracePrint "货物:" & (index + 1) & "的目标是:"& (n + 1) & ", 差值是: " & diff 
+            If buildings(n, 2) Then 
+                needGoods = True
+                target = n
+                msg = "货物:" & (index + 1) & "的目标是:"& (n + 1)
+                TracePrint msg
+                x = buildings(n, 0)
+                y = buildings(n, 1)
+            Else 
+                needGoods = False
+                TracePrint "货物跳过"
+                ShowMessage "货物跳过"
+            End If
+            Exit For
+        End If
+    Next
+    ReleaseCapture 
 
-	If needGoods Then 
-		msg = "移动货物到: " & (target + 1)
-		TracePrint msg
-		ShowMessage msg
-		// 拖动货物
-		TouchMove x - 20, y - 30, 1, 100
-		TouchUp 1
-		Delay 500
-	End If
-	TouchUp 1
+    If needGoods Then 
+        msg = "移动货物到: " & (target + 1)
+        TracePrint msg
+        ShowMessage msg
+        // 拖动货物
+        TouchMove x - 20, y - 30, 1, 100
+        TouchUp 1
+        Delay 500
+    End If
+    TouchUp 1
 End Function
 
 // 自动升级
 Function AutoLevelUp()
-	Dim t = TickCount(), needLevelUp = False
-	If autoUpdateInterval > 0 And Int(t / autoUpdateInterval / 1000) - 0.1 > autoLevelUpTimes Then 
-		For i = 0 To Ubound(buildings)
-			If buildings(i, 3) Then 
-				needLevelUp = True
-				Tap edit(0), edit(1)
-				Delay 100
-				Tap buildings(i, 0), buildings(i, 1)
-				Delay 300
-				For n = 0 To buildings(i, 4)
-					Tap 440, 876
-				Next
-				Delay 100
-			End If
-		Next
-		If needLevelUp Then 
-			autoLevelUpTimes = autoLevelUpTimes + 1
-			TracePrint "结束自动升级, 升级了" & autoLevelUpTimes & "次"
-			Tap edit(0), edit(1)
-			Delay 200
-			End If
-	End If
+    Dim t = TickCount(), needLevelUp = False
+    If autoUpdateInterval > 0 And Int(t / autoUpdateInterval / 1000) - 0.1 > autoLevelUpTimes Then 
+        For i = 0 To Ubound(buildings)
+            If buildings(i, 3) Then 
+                needLevelUp = True
+                Tap edit(0), edit(1)
+                Delay 100
+                Tap buildings(i, 0), buildings(i, 1)
+                Delay 300
+                For n = 0 To buildings(i, 4)
+                    Tap 440, 876
+                Next
+                Delay 100
+            End If
+        Next
+        If needLevelUp Then 
+            autoLevelUpTimes = autoLevelUpTimes + 1
+            TracePrint "结束自动升级, 升级了" & autoLevelUpTimes & "次"
+            Tap edit(0), edit(1)
+            Delay 200
+        End If
+    End If
 End Function
 
 // 获取坐标
 Function GetPosition(str)
-	GetPosition = Split(Replace(str, " ", ""), ",")
+    GetPosition = Split(Replace(str, " ", ""), ",")
 End Function

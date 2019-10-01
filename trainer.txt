@@ -78,6 +78,7 @@ Function FindTrain()
 End Function
 
 Function FindGoods(index)
+	Tap 29, 937
 	Dim zb = GetPosition(goodsDecide(index))
 	Dim intX, intY
 	Dim text = index + 1, msg = "找到货物" & text

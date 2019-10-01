@@ -9,7 +9,7 @@ https://www.bilibili.com/video/av69603157/
 ## 脚本需求
 - windows
 - 安卓模拟器
-- 按键精灵手机助手
+- [按键精灵手机助手](http://www.mobileanjian.com/)
 - 分辨率 540 × 960
 
 ## 自定义

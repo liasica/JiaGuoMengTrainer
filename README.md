@@ -1,8 +1,7 @@
 # 家国梦辅助脚本
 
 ## 演示
-> 演示不含`收集货物跳过时加速火车运行速度`
-https://www.bilibili.com/video/av69592661/
+https://www.bilibili.com/video/av69603157/
 
 ## 脚本需求
 - windows

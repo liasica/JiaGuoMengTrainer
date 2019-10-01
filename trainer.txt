@@ -50,10 +50,17 @@ Dim goodsDecide = Array("339,840,343,844", "418,800,421,804", "494,757,497,761")
 While True
 	Tap 29, 937
 	Dim hasGoods = FindTrain(), goodsTimes = 0
-	Do While hasGoods or(goodsTimes < 10)
-		hasGoods = FindTrain()
+	hasGoods = FindTrain()
 		goodsTimes = goodsTimes + 1
+		TracePrint goodsTimes
 		Delay 100
+		If goodsTimes >= 6 Then 
+			KillApp "com.tencent.jgm"
+			Delay 200
+			RunApp "com.tencent.jgm"
+			Delay 5000
+			hasGoods = False
+		End If
 	Loop
 	GetGold
 	AutoLevelUp 

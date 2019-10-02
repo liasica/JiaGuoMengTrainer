@@ -4,6 +4,7 @@ If EnableFastCapture(true) Then
 End If
 
 // 坐标系 (从左往右, 从下往上, 从0开始)
+// 0,1坐标 2收货 3升级
 Dim edit = Array(487, 574)
 Dim buildings(8, 3)
 Dim buildingsStr = "180,624 311,562 428,506 182,502 303,440 432,377 185,374 304,314 433,249"
@@ -14,33 +15,37 @@ For i = 0 To UBound(buildingsArr)
     Dim pos = GetPosition(buildingsArr(i))
     buildings(i, 0) = pos(0)
     buildings(i, 1) = pos(1)
-    buildings(i, 2) = True
-    buildings(i, 3) = False
+	// 读取配置
+	buildings(i, 2) = ReadUIConfig("goods_" & (i + 1))
+	buildings(i, 3) = ReadUIConfig("update_" & (i + 1))
+	Dim g = "否", u = "否"
+	If buildings(i, 2) Then 
+		g = "是"
+	End If
+	If buildings(i, 3) Then 
+		u = "是"
+	End If
+	TracePrint "建筑" & (i + 1) & " 收货 ->" & g & " 升级 ->" & u
 Next
 
 // 升级次数
 Dim autoLevelUpTimes = 0
 
-/**
- * 自定义升级间隔 (单位: 秒)
- */
-Dim autoUpdateInterval = 10
+// 自定义升级间隔 (单位: 秒)
+Dim autoUpdateInterval = Int(ReadUIConfig("update_time"))
+TracePrint "升级间隔: " & autoUpdateInterval & "秒"
 
-/**
- * 自定义不要收集的货物, 每行一格
- * buildings(格子序号, 2) = False
- * 例: 第5格不收货
- */
-//buildings(4, 2) = False
+// 跳过货物后是否重启游戏
+Dim ignoreGoodsRestart = False, ignoreOP = "等待"
 
-/**
- * 自定义要升级的建筑, 每行一格
- * buildings(格子序号, 3) = True
- * 自定义每次升级次数 buildings(格子序号, 4) = 1
- * 例: 第4格建筑自动升级, 每次升级1次
- */
-//buildings(3, 3) = True
-//buildings(3, 4) = 1
+If ReadUIConfig("ignore") = 1 Then 
+	ignoreGoodsRestart = True
+	ignoreOP = "重启游戏"
+	Delay 200
+	ShowMessage "跳过货物后重启游戏"
+End If
+
+TracePrint "货物跳过后是否重启游戏: " & ignoreOP
 
 // 货物坐标
 Dim goodsList = Array("334,817", "412,783", "488,742")

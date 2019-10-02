@@ -173,7 +173,7 @@ Function DragGoods(index)
             Else 
                 needGoods = False
                 TracePrint "货物跳过"
-                ShowMessage "货物跳过"
+                // ShowMessage "货物跳过"
             End If
             Exit For
         End If
@@ -183,7 +183,7 @@ Function DragGoods(index)
     If needGoods Then 
         msg = "移动货物到: " & (target + 1)
         TracePrint msg
-        ShowMessage msg
+        // ShowMessage msg
         // 拖动货物
         TouchMove x - 20, y - 30, 1, 100
         TouchUp 1

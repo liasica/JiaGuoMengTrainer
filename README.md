@@ -17,6 +17,7 @@ v0.8
 只运行一次解决办法: [重复运行](https://github.com/liasica/JiaGuoMengTrainer/wiki/4.%E8%87%AA%E5%8A%A8%E5%8C%96%E8%AE%BE%E5%AE%9A#%E9%87%8D%E5%A4%8D%E8%BF%90%E8%A1%8C)
 
 ## 视频教程
+https://www.bilibili.com/video/av69813206/
 
 ## 已有BUG
 - 选择多个自动升级建筑会错乱 请暂时只选择一个自动升级建筑

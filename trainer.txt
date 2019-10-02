@@ -43,6 +43,9 @@ For i = 0 To UBound(buildingsArr)
 	TracePrint "建筑" & (i + 1) & " 收货 ->" & g & " 升级 ->" & u
 Next
 
+// 自动收割金币
+Dim mowing = ReadUIConfig("mowing", True)
+
 // 升级次数
 Dim autoLevelUpTimes = 0
 
@@ -107,8 +110,10 @@ While True
                 Delay 3000
             End If
         Loop
-        // 收集金币 
-        GetGold
+        If mowing Then 
+        	// 收集金币 
+        	GetGold
+        End If
         // 自动升级
         AutoLevelUp 
         // 自动升级政策

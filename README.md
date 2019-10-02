@@ -5,6 +5,9 @@
 最新版本导出脚本: https://github.com/liasica/JiaGuoMengTrainer/releases  
 **善用搜索引擎, 请勿做伸手党**
 
+## 使用教程
+[使用教程](使用教程.md)
+
 ## 演示
 > 个人比较懒, 谁能提供个手把手的教学视频或者图文教程欢迎提交PR  
 
@@ -30,9 +33,6 @@ https://www.bilibili.com/video/av69603157/
 | 6 | 7 | 8 |  
 | 3 | 4 | 5 |  
 | 0 | 1 | 2 |  
-
-## 使用教程
-[wiki](https://github.com/liasica/JiaGuoMengTrainer/wiki)
 
 ## 已实现功能
 - [x] 自动收集金币

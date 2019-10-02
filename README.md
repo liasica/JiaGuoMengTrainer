@@ -23,9 +23,6 @@ https://www.bilibili.com/video/av69603157/
 - Android手机 `未测试`
 - iPhone `未测试`
 
-## 自定义
-> `自定`下面的是可以修改成自己需要的配置
-
 ## 格子
 
 > 九宫格, 从左到右从上到下, 格子序号从0开始
@@ -33,6 +30,9 @@ https://www.bilibili.com/video/av69603157/
 | 6 | 7 | 8 |  
 | 3 | 4 | 5 |  
 | 0 | 1 | 2 |  
+
+## 使用教程
+[wiki](https://github.com/liasica/JiaGuoMengTrainer/wiki)
 
 ## 已实现功能
 - [x] 自动收集金币

@@ -4,6 +4,7 @@
 代码在`trainer.txt`文件中
 
 ## 演示
+> 个人比较懒, 谁能提供个手把手的教学视频或者图文教程欢迎提交PR
 https://www.bilibili.com/video/av69603157/
 
 ## 脚本需求

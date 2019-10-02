@@ -5,6 +5,10 @@
 最新版本导出脚本: https://github.com/liasica/JiaGuoMengTrainer/releases  
 **善用搜索引擎, 请勿做伸手党, PS: 人人都讨厌伸手党**
 
+## 当前版本
+v0.8
+
+
 ## 使用教程
 [使用说明](https://github.com/liasica/JiaGuoMengTrainer/wiki)
 

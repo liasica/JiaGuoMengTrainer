@@ -1,16 +1,13 @@
 # 家国梦自动化
-按键精灵的语法蛋疼，并且复制出来代码的时候中文会乱码！  
-~有人有办法复制代码出来中文不乱码的话欢迎issues里面提供给我，多谢！~  
-代码在`trainer.txt`文件中(更新界面后代码会有报错, 不使用界面版的请自行修改 [`L19`](https://github.com/liasica/JiaGuoMengTrainer/blob/master/trainer.txt#L19) [`L20`](https://github.com/liasica/JiaGuoMengTrainer/blob/master/trainer.txt#L20) [`L35`](https://github.com/liasica/JiaGuoMengTrainer/blob/master/trainer.txt#L35) [`L41`](https://github.com/liasica/JiaGuoMengTrainer/blob/master/trainer.txt#L41))  
-最新版本导出脚本: https://github.com/liasica/JiaGuoMengTrainer/releases  
-**善用搜索引擎, 请勿做伸手党, PS: 人人都讨厌伸手党 [提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md)**
+**善用搜索引擎, 请勿做伸手党, PS: 人人都讨厌伸手党 [提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md)**  
+**注意**  
+断网模式会有几率触发按键精灵崩溃/假死, 请慎用, 最好`等待`或`重启`
 
 ## 当前版本
 [v0.10](https://github.com/liasica/JiaGuoMengTrainer/releases/tag/v0.10)
 
 ## 如何提交反馈
 [创建issue](https://github.com/liasica/JiaGuoMengTrainer/issues/new)，注：其他渠道的反馈不一定看得到
-
 
 ## 使用教程
 [使用说明](https://github.com/liasica/JiaGuoMengTrainer/wiki)  

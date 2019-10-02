@@ -1,7 +1,8 @@
 # 家国梦辅助脚本
 按键精灵的语法蛋疼，并且复制出来代码的时候中文会乱码！  
 ~有人有办法复制代码出来中文不乱码的话欢迎issues里面提供给我，多谢！~  
-代码在`trainer.txt`文件中
+代码在`trainer.txt`文件中  
+最新版本导出脚本: https://github.com/liasica/JiaGuoMengTrainer/releases  
 **善用搜索引擎, 请勿做伸手党**
 
 ## 演示

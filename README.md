@@ -6,7 +6,7 @@
 **善用搜索引擎, 请勿做伸手党, PS: 人人都讨厌伸手党 [提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md)**
 
 ## 当前版本
-[v0.9](https://github.com/liasica/JiaGuoMengTrainer/releases/tag/v0.9)
+[v0.10](https://github.com/liasica/JiaGuoMengTrainer/releases/tag/v0.10)
 
 ## 如何提交反馈
 [创建issue](https://github.com/liasica/JiaGuoMengTrainer/issues/new)，注：其他渠道的反馈不一定看得到
@@ -58,6 +58,7 @@ https://www.bilibili.com/video/av69603157/
 - [x] 自动点击可能会对游戏持续性造成影响的按钮
 - [x] 自动开启游戏
 - [x] 跳过收货后断网加速火车
+- [x] 用户选择是否自动收金币
 
 ## 待完善功能
 - [ ] 按自定义策略自动升级政策
@@ -66,7 +67,6 @@ https://www.bilibili.com/video/av69603157/
 - [ ] 卡死检测
 - [ ] 使用其他语言做成APP且可配置
 - [ ] 远程网页管理(管理设定 / 策略 / 查看当前截图)
-- [ ] 用户选择是否自动收金币
 
 ## 关于误差
 自动收集货物有一定误差率, 简单测试准确度大概在~~`90%`又挂了好久统计了下最新数据是: ~~`78%`，够用了，目前没有发现特别严重的事故

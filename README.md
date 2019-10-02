@@ -8,6 +8,8 @@
 ## 使用教程
 [使用说明](https://github.com/liasica/JiaGuoMengTrainer/wiki)
 
+## 视频教程
+
 ## 已有BUG
 - 选择多个自动升级建筑会错乱 请暂时只选择一个自动升级建筑
 

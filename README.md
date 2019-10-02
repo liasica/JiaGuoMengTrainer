@@ -6,7 +6,7 @@
 **善用搜索引擎, 请勿做伸手党**
 
 ## 使用教程
-[使用说明](使用说明.md)
+[使用说明](https://github.com/liasica/JiaGuoMengTrainer/wiki)
 
 ## 演示
 > 个人比较懒, 谁能提供个手把手的教学视频或者图文教程欢迎提交PR  

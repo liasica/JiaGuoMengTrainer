@@ -13,8 +13,8 @@ https://www.bilibili.com/video/av69603157/
 ## 脚本需求
 - windows
 - 安卓模拟器
-- [按键精灵手机助手](http://www.mobileanjian.com/)
-- 分辨率 540 × 960
+- [按键精灵手机助手](http://www.mobileanjian.com/) / [按键精灵](http://www.mobileanjian.com/)
+- 分辨率 540 × 960 (暂未做适配, 也懒得做)
 
 ## 自定义
 > `自定`下面的是可以修改成自己需要的配置
@@ -32,10 +32,10 @@ https://www.bilibili.com/video/av69603157/
 - [x] 自动按需升级建筑
 - [x] 自动按需收集货物
 - [x] 收集货物跳过时加速火车运行速度（重启游戏赶走火车，暂时不可配置，不喜欢重启就不要跳过）
+- [x] UI界面配置
 
 ## 待完善功能
 - [ ] 按自定义策略自动升级政策
-- [ ] UI界面配置
 
 ## 待做功能
 - [ ] 可选择关闭重启游戏加速收货功能
@@ -45,27 +45,6 @@ https://www.bilibili.com/video/av69603157/
 
 ## 关于误差
 自动收集货物有一定误差率, 简单测试准确度大概在~~`90%`又挂了好久统计了下最新数据是: ~~`78%`，够用了，目前没有发现特别严重的事故
-
-## 自定义
-
-### 升级间隔, 默认120秒
-Dim autoUpdateInterval = `120`
-
-### 不需要收集的货物
-> 每行一条数据, 可设置多条
-格式为 `buildings(**格子序号**, 2) = False` 每行一条
-https://github.com/liasica/JiaGuoMengTrainer/blob/master/trainer.txt#L36
-
-### 要升级的建筑
-> 每行一条数据, 可设置多条
-
-https://github.com/liasica/JiaGuoMengTrainer/blob/master/trainer.txt#L44
-
-格式为
-```
-buildings(格子序号, 3) = True
-buildings(格子序号, 4) = 1
-```
 
 ### 编辑和使用
 - 打开按键精灵手机助手

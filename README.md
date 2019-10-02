@@ -6,7 +6,7 @@
 **善用搜索引擎, 请勿做伸手党, PS: 人人都讨厌伸手党 [提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md)**
 
 ## 当前版本
-v0.8
+[v0.9](https://github.com/liasica/JiaGuoMengTrainer/releases/tag/v0.9)
 
 ## 如何提交反馈
 [创建issue](https://github.com/liasica/JiaGuoMengTrainer/issues/new)，注：其他渠道的反馈不一定看得到

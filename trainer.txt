@@ -1,3 +1,10 @@
+While Sys.AppIsFront("com.tencent.jgm") = False
+	TracePrint "等待游戏运行"
+	ShowMessage "等待游戏运行"
+	RunApp "com.tencent.jgm"
+	Delay 1000
+Wend
+
 // 需要: 分辨率 540 × 960
 If EnableFastCapture(true) Then 
     TracePrint "开启快速取色"
@@ -56,8 +63,17 @@ Dim policyTimes = 0
 Dim policyInterval = 120
 
 Dim trainGoods = Array(False, False, False)
+
+TracePrint "开始循环"
+
 While True
 //    TracePrint "新循环"
+	ClickOKButton 
+	Delay 200
+    Tap 29, 937
+	Delay 200
+    Tap 29, 937
+	Delay 200
     Dim same = CmpColor(479, 559, "3EC6FF", 0.9)
     If same = 0 Then 
         // 防弹窗
@@ -75,10 +91,12 @@ While True
             TracePrint goodsTimes
             Delay 100
             If goodsTimes >= 6 Then 
-                // 关闭游戏
-                KillApp "com.tencent.jgm"
-                Delay 200
-                RunApp "com.tencent.jgm"
+            	If ignoreGoodsRestart Then 
+            		// 重启游戏
+                	KillApp "com.tencent.jgm"
+                	Delay 200
+                	RunApp "com.tencent.jgm"
+            		End If
                 hasGoods = False
                 Delay 5000
             End If
@@ -92,6 +110,16 @@ While True
         Delay 100
     End If
 Wend
+
+// 检测 "好的" 按钮并自动点击
+Function ClickOKButton
+	Dim x, y
+	FindPic 0, 0, 0, 0, "Attachment:btn.png", "000000", 0, 1, x, y
+	TracePrint x & " " &  y
+	If x > -1 And y > -1 Then
+		Tap x, y
+	End If
+End Function
 
 // 获取金币
 Function GetGold
@@ -227,3 +255,5 @@ End Function
 Function GetPosition(str)
     GetPosition = Split(Replace(str, " ", ""), ",")
 End Function
+
+

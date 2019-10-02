@@ -8,6 +8,9 @@
 ## 当前版本
 v0.8
 
+## 如何提交反馈
+[创建issue](https://github.com/liasica/JiaGuoMengTrainer/issues/new)，注：其他渠道的反馈不一定看得到
+
 
 ## 使用教程
 [使用说明](https://github.com/liasica/JiaGuoMengTrainer/wiki)  

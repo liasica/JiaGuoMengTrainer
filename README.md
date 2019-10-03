@@ -9,6 +9,9 @@
 ## 如何提交反馈
 [创建issue](https://github.com/liasica/JiaGuoMengTrainer/issues/new)，注：其他渠道的反馈不一定看得到
 
+## 一些问题
+- [如果启用按键精灵没反应，可以尝试使用更低版本的按键精灵 - @Srainsama](https://github.com/liasica/JiaGuoMengTrainer/issues/10)
+
 ## 使用教程
 [使用说明](https://github.com/liasica/JiaGuoMengTrainer/wiki)  
 只运行一次解决办法: [重复运行](https://github.com/liasica/JiaGuoMengTrainer/wiki/4.%E8%87%AA%E5%8A%A8%E5%8C%96%E8%AE%BE%E5%AE%9A#%E9%87%8D%E5%A4%8D%E8%BF%90%E8%A1%8C)

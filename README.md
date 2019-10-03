@@ -4,7 +4,7 @@
 断网模式会有几率触发按键精灵崩溃/假死, 请慎用, 最好`等待`或`重启`
 
 ## 当前版本
-[v0.10](https://github.com/liasica/JiaGuoMengTrainer/releases/tag/v0.10)
+[v0.11-fix](https://github.com/liasica/JiaGuoMengTrainer/releases/tag/v0.11-fix)
 
 ## 如何提交反馈
 [创建issue](https://github.com/liasica/JiaGuoMengTrainer/issues/new)，注：其他渠道的反馈不一定看得到

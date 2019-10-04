@@ -9,6 +9,12 @@
 ## 当前版本
 [v0.11-fix](https://github.com/liasica/JiaGuoMengTrainer/releases/tag/v0.11-fix)
 
+## 需求
+- windows
+- 安卓模拟器
+- [按键精灵手机助手(3.3.5)](http://www.mobileanjian.com/) / [按键精灵3.3.5](http://www.mobileanjian.com/)
+- 分辨率 540 × 960 240DPI (正式版为: 1920 × 1080 480DPI)
+
 ## 如何提交反馈
 [创建issue](https://github.com/liasica/JiaGuoMengTrainer/issues/new)，注：其他渠道的反馈不一定看得到
 
@@ -29,12 +35,6 @@ https://www.bilibili.com/video/av69813206/
 > 个人比较懒, 谁能提供个手把手的教学视频或者图文教程欢迎提交PR  
 
 https://www.bilibili.com/video/av69603157/
-
-## 需求
-- windows
-- 安卓模拟器
-- [按键精灵手机助手3.3.5](http://www.mobileanjian.com/) / [按键精灵](http://www.mobileanjian.com/)
-- 分辨率 540 × 960 (暂未做适配, 也懒得做)
 
 ## 兼容
 > 理论上移动设备只要按键精灵支持, 本脚本就支持, 但是会有分辨率的问题, 所以大家最好还是用模拟器挂机吧

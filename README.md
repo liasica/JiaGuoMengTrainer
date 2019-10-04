@@ -9,6 +9,11 @@
 ## 当前版本
 [v1.02](https://github.com/liasica/JiaGuoMengTrainer/releases/tag/v1.02)
 
+## 版本规划
+- v1.1 更新OCR识别, 准确度更高
+- v1.2 策略政策升级
+- v2.0 使用golang重构, 实现网页 / 远程管理
+
 ## 需求
 - windows
 - 安卓模拟器

@@ -7,7 +7,7 @@
 [演示](https://www.bilibili.com/video/av69603157)
 
 ## 当前版本
-[v1.0](https://github.com/liasica/JiaGuoMengTrainer/releases/tag/v1.0)
+[v1.1](https://github.com/liasica/JiaGuoMengTrainer/releases/tag/v1.1)
 
 ## 需求
 - windows

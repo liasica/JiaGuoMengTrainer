@@ -27,6 +27,12 @@
 ## 一些问题
 - [如果启用按键精灵没反应，可以尝试使用更低版本的按键精灵 - @Srainsama](https://github.com/liasica/JiaGuoMengTrainer/issues/10)
 
+### 自适应分辨率已知问题
+> 我自己测试出的
+
+- 无法防卡住
+- 货物无法识别数量, 解决办法是每次强制拖动三次
+
 ## 使用教程
 [使用说明](https://github.com/liasica/JiaGuoMengTrainer/wiki)  
 只运行一次解决办法: [重复运行](https://github.com/liasica/JiaGuoMengTrainer/wiki/4.%E8%87%AA%E5%8A%A8%E5%8C%96%E8%AE%BE%E5%AE%9A#%E9%87%8D%E5%A4%8D%E8%BF%90%E8%A1%8C)

@@ -1,7 +1,9 @@
 # 家国梦自动化
+> 自v0.10起，不再提供`.txt`的源码，需要改源码的下载`.mdq`导入按键精灵后修改
+
 **善用搜索引擎, 请勿做伸手党, PS: 人人都讨厌伸手党 [提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md)**  
 **注意**  
-断网模式会有几率触发按键精灵崩溃/假死, 请慎用, 最好`等待`或`重启`  
+~~断网模式会有几率触发按键精灵崩溃/假死~~(据反馈，我本人没有碰到过), 请慎用, 最好`等待`或`重启`  
 [演示](https://www.bilibili.com/video/av69603157)
 
 ## 当前版本

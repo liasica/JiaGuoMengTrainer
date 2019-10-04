@@ -31,7 +31,7 @@ https://www.bilibili.com/video/av69603157/
 ## 需求
 - windows
 - 安卓模拟器
-- [按键精灵手机助手](http://www.mobileanjian.com/) / [按键精灵](http://www.mobileanjian.com/)
+- [按键精灵手机助手3.3.5](http://www.mobileanjian.com/) / [按键精灵](http://www.mobileanjian.com/)
 - 分辨率 540 × 960 (暂未做适配, 也懒得做)
 
 ## 兼容

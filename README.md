@@ -7,13 +7,14 @@
 [演示](https://www.bilibili.com/video/av69603157)
 
 ## 当前版本
-[v0.11-fix](https://github.com/liasica/JiaGuoMengTrainer/releases/tag/v0.11-fix)
+[v1.0](https://github.com/liasica/JiaGuoMengTrainer/releases/tag/v1.0)
 
 ## 需求
 - windows
 - 安卓模拟器
 - [按键精灵手机助手(3.3.5)](http://www.mobileanjian.com/) / [按键精灵3.3.5](http://www.mobileanjian.com/)
-- 分辨率 540 × 960 240DPI (正式版为: 1920 × 1080 480DPI)
+- 正式版为: 1920 × 1080 480DPI (从v1.0开始)
+- v1.0以下版本分辨率 540 × 960 240DPI
 
 ## 如何提交反馈
 [创建issue](https://github.com/liasica/JiaGuoMengTrainer/issues/new)，注：其他渠道的反馈不一定看得到

@@ -7,7 +7,7 @@
 [演示](https://www.bilibili.com/video/av69603157)
 
 ## 当前版本
-[v1.04](https://github.com/liasica/JiaGuoMengTrainer/releases/tag/v1.04)
+[v1.05](https://github.com/liasica/JiaGuoMengTrainer/releases/tag/v1.05)
 
 ## 版本规划
 - v1.1 更新OCR识别, 准确度更高

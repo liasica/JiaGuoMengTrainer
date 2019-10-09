@@ -7,7 +7,10 @@
 [演示](https://www.bilibili.com/video/av69603157)
 
 ## 当前版本
-[v1.05](https://github.com/liasica/JiaGuoMengTrainer/releases/tag/1.05-fix)
+> 最近忙于使用`Go + OpenCV + TensorFlow`实现全自动化辅助功能, 以便丢掉按键精灵~全分辨率兼容且可以实现远程管理 / 网页管理 / 手机管理 还有其他各种任何想要的功能, 可以真正做到远程挂机远程管理, 自动管理, 同时会提供开放api给各位大佬(nga论坛上的一堆大佬) 方便让各位大佬做的自动升级策略以api的形式提供给我的辅助, 这样的话真正做到了无人值守自动升级(还要人干啥?)
+
+- [v1.05](https://github.com/liasica/JiaGuoMengTrainer/releases/tag/1.05-fix)
+- [社区版 -by @hentaiFly](https://github.com/liasica/JiaGuoMengTrainer/issues/31)
 
 ## 版本规划
 - v1.1 更新OCR识别, 准确度更高
